@@ -1,0 +1,19 @@
+body{
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+img{
+    padding: 0 2%;
+}
+
+.dados{
+    flex-grow: 1;
+}
+
+.resposta{
+    flex-basis: 100%;
+    text-align: center;
+}
+
