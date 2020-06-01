@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Combinador de cores</title>
+        <link rel="stylesheet" href="cores.css">
+        <script src="cores.js" defer></script>
+    </head>
+
+    <body>
+        <header>
+            <h1>Combinador de Cores</h1>
+        </header>
+        <main>
+            <form>
+                <div class="divred">
+                    <label for="red">Adicione vermelho</label>
+                    <input type="range" min="0" max="255" step="1" value="0" id="red" oninput="vermelho()">
+                    <input type="number" id="redNumber" min="0" max="255" step="1" value="0" oninput="vermelhoNumber()">
+
+                </div>
+                <div class="divgreen">
+                    <label for="green">Adicione verde</label>
+                    <input type="range" min="0" max="255" step="1" value="0" id="green" oninput="verde()">
+                    <input type="number" id="greenNumber" min="0" max="255" step="1" value="0" oninput="verdeNumber()">
+
+                </div>
+
+                <div class="divblue">
+                    <label for="blue">Adicione azul</label>
+                    <input type="range" min="0" max="255" step="1" value="0" id="blue" oninput="azul()">
+                    <input type="number" id="blueNumber" min="0" max="255" step="1" value="0" oninput="azulNumber()">
+
+                </div>
+            </form>
+            <div class="divbloco"><span></span>
+
+            </div>
+        </main>
+        
+    </body>
+
+</html>

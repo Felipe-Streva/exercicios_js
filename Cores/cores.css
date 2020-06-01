@@ -1,0 +1,41 @@
+h1{
+    text-align: center;
+    color: black;
+}
+
+h1:hover{
+    color: blue;
+}
+
+main{
+    display: flex;
+    width: 60%;
+    margin: 0 auto;
+    align-items: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.divred{
+    padding: 10px 10px;
+}
+
+.divgreen{
+    padding: 10px 10px;
+}
+
+.divblue{
+    padding: 10px 10px;
+}
+
+.divbloco{
+    border: black solid 3px;
+    width: 100px;
+    height: 100px;
+    margin-left: 40px;
+    background: black;
+}
