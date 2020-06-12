@@ -1,13 +1,20 @@
-var text = document.querySelector('p');
-var contador = document.querySelector('.contador')
+var texto = document.querySelector('#texto');
+var contador = document.querySelector('.contador');
 var contadorDeTempo = 0;
+var btn1 = document.querySelector('#btn-1');
+var btn2 = document.querySelector('#btn-2');
+var btn3 = document.querySelector('#btn-3');
 
+btn1.addEventListener('click', estarCasa)
+btn2.addEventListener('click', morrer)
+btn3.addEventListener('click', estarCasa)
+  
 
-setTimeout(estarCasa, 1000)    
-console.log(contadorDeTempo)
 function estarCasa(){
 
-    let escolha = prompt("Você está em casa, para sair de casa digite 1, para ficar em casa digite 2")
+    textoButao('Sair de Casa' , 'Ficar em casa', 'Chorar');
+    mudaButao(escolhaItens, estarCasa, morrer)
+
     if (escolha == 1){
         mudaContador(1);
         if (contadorDeTempo > 100){
@@ -34,18 +41,31 @@ function estarCasa(){
     
 }
 
+function mudaButao(botao1, botao2, botao3){
+    btn1.addEventListener('click', botao1);
+    btn2.addEventListener('click', botao2);
+    btn3.addEventListener('click', botao3);
+}
+
+function textoButao(botao1, botao2, botao3){
+    btn1.innerHTML = `${botao1}`;
+    btn2.innerHTML = `${botao2}`;
+    btn3.innerHTML = `${botao3}`;
+}
+
 function mudaContador(valor){
     contadorDeTempo += valor;
     contador.innerHTML = `${contadorDeTempo}/100 horas`;
     return 0;
 }
 
-function morrer(tempo){
-    if(tempo > 100){
-        text.innerHTML = 'Você demorou demais, o corona sofreu mutações e o mundo sucumbiu'
+function morrer(){
+    if(contadorDeTempo > 100){
+        texto.innerHTML = 'Você demorou demais, o corona sofreu mutações e o mundo sucumbiu'
+        btn1.style.display = 'none'
         return 0;
     }
-    text.innerHTML = "Você morreu"
+    texto.innerHTML = "Você morreu"
     return 0;
 }
 
