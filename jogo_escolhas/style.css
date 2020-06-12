@@ -1,0 +1,65 @@
+body{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+h1{
+    color: purple;
+    text-align: center;
+    font-weight: bold;
+    font-size: 60px;
+
+}
+
+.contador{
+    text-align: center;
+    color: purple;
+    font-size: 20px;
+    font-weight: bold;
+    position: fixed;
+    margin-top: 30px;
+    left: 100px;
+}
+
+.texto{
+    text-align: center;
+    color: purple;
+    font-size: 20px;
+    font-weight: bold;
+    width: 80%;
+}
+
+.button{
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+}
+
+button{
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+}
+
+@media (max-width:800px){
+    .contador{
+        position: initial;
+        left: initial;
+    }
+
+    .button{
+        margin: 5px;
+        padding: 5px;
+    }
+
+    button{
+        margin: 5px;
+        padding: 5px;
+    }
+
+
+}
