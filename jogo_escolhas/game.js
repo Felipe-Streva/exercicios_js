@@ -1,7 +1,7 @@
 var contador = document.querySelector('.contador');
 var contadorDeTempo = 0;
 
-// iten[0] = chave //iten[1] = dinheiro //iten[2] = cervejas //itens[3] karaoke
+// iten[0] = chave //iten[1] = dinheiro //iten[2] = cervejas //itens[3] karaokê
 var itens = [false,false, 0, false];
 
 var btn1 = elementFactory('button','btn-1','button','Começar!');
