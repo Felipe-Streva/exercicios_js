@@ -1,36 +1,59 @@
+*{
+    font-family: 'Press Start 2P', cursive;
+    margin: 0px;
+    padding: 0px;
+}
+
+
 body{
     display: flex;
     align-items: center;
     flex-direction: column;
     width: 100vw;
     height: 100vh;
+    background-color: #2f1b41;
 }
 
 
 h1{
-    color: purple;
+    color: #9f1e49;
     text-align: center;
     font-weight: bold;
     font-size: 60px;
+    margin: 50px 0;
 
 }
 
 .contador{
     text-align: center;
-    color: purple;
-    font-size: 20px;
+    color: #9f1e49;
+    font-size: 15px;
     font-weight: bold;
-    position: fixed;
-    margin-top: 30px;
-    left: 100px;
+    margin: 30px 0;
+    left: 50px;
+}
+
+.introducao{
+    text-align: center;
+    color: #9f1e49;
+    font-size: 15px;
+    width: 80%;
 }
 
 .texto{
     text-align: center;
-    color: purple;
-    font-size: 20px;
-    font-weight: bold;
+    color: #9f1e49;
+    font-size: 15px;
     width: 80%;
+    margin-top: 20px;
+}
+
+#texto{
+    text-align: center;
+    color: #9f1e49;
+    font-size: 15px;
+    width: 80%;
+    margin: 20px auto;
 }
 
 .button{
@@ -45,12 +68,13 @@ button{
     text-align: center;
 }
 
-.restart{
+.restart a{
     text-align: center;
-    color: purple;
+    color: #fecd51;
     font-size: 20px;
     font-weight: bold;
     width: 80%;
+    text-decoration: none;
 }
 
 @media (max-width:800px){
