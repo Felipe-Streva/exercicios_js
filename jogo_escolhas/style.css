@@ -68,6 +68,10 @@ button{
     text-align: center;
 }
 
+.restart{
+    margin-bottom: 20px;
+}
+
 .restart a{
     text-align: center;
     color: #fecd51;

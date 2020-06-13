@@ -71,9 +71,18 @@ function montarLayout(text_p, text_b1, text_b2, text_b3){
 function estarCasa(){
     mudaContador(1)
     montarLayout('O que você faz?', 'Sair de Casa!', 'Ficar em Casa!', 'Chorar!')
-    mudaButao(escolhaItens, estarCasa, morrer)
+    mudaButao(escolhaItens, estarCasa, chorar)
     confereContador()
     
+}
+
+function chorar(){
+    mudaContador(10)
+    montarLayout('Você ficou chorando por 10h!','','Dias difíceis!','')
+    btn1.style.display = 'none';
+    btn3.style.display = 'none';
+    mudaButao(estarCasa, estarCasa, estarCasa);
+    confereContador()
 }
 
 function morrer(){
@@ -118,7 +127,7 @@ function ondeir(){
 
 function caixa(){
     mudaContador(2)
-    montarLayout('Você está na Agência da Caixa, para qual fila você vai para retirar o Corona Voucher?', 'Fila da esquerda( 5 pessoas)', 'Caixa eletrônico', 'Fila da direita(2 velinhos')
+    montarLayout('Você está na Agência da Caixa, para qual fila você vai para retirar o Corona Voucher?', 'Fila da esquerda( 5 pessoas)', 'Caixa eletrônico', 'Fila da direita(2 velhinhos)')
     mudaButao(filaEsq , eletronico, filaDir)
     confereContador()
 }
