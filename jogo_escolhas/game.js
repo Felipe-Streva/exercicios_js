@@ -1,7 +1,7 @@
 var contador = document.querySelector('.contador');
 var contadorDeTempo = 0;
 
-// iten[0] = chave //iten[1] = dinheiro //iten[2] = cervejas //itens[3] karaokê
+// iten[0] = chave //iten[1] = dinheiro //iten[2] = cervejas //itens[3] karaoke
 var itens = [false,false, 0, false];
 
 var btn1 = elementFactory('button','btn-1','button','Começar!');
@@ -178,10 +178,18 @@ function aviao(){
 
 function onibus(){
     if(itens[1]==true){
+        if(itens[0]==false){
         mudaContador(15)
         montarLayout('Depois de uma longa viagem, você chegou em Brasília! O chefe do seu laboratório está em uma manifestação em frente ao Palácio do Planalto!', 'Ir lá falar com ele', 'Ir lá bater nos manifestantes', 'Mandar um Zap e marcar no bar do Zé')
         mudaButao(falarComEle, bater, zap)
         confereContador()
+        }
+        if (itens[0] == true){
+            mudaContador(15)
+            montarLayout('Depois de uma longa viagem, você chegou em Brasília novamente! O que fazer em Brasília? ', 'Voltar pra cidade natal', 'Invadir um hospital!', 'Conhecer o lago Paranoá!')
+            mudaButao(voltar, bater, lago)
+            confereContador()
+        }
     }
     if(itens[1]==false){
         mudaContador(4)
@@ -191,6 +199,22 @@ function onibus(){
         mudaButao(irbrasilia, irbrasilia, irbrasilia)
         confereContador()
     }
+}
+
+function voltar(){
+    mudaContador(12)
+    montarLayout('Você é um pouquinho indeciso, seu tempo está acabando!', '','A maconha me confunde as vezes!','')
+    btn1.style.display = 'none';
+    btn3.style.display = 'none';
+    mudaButao(ondeir, ondeir, ondeir)
+    confereContador()
+}
+
+function lago(){
+    montarLayout('Você curtir seus últimos dias em paz no lago Paranoá, antes do mundo sucumbir ao vírus!','','Tranquilão!','')
+    btn1.style.display = 'none';
+    btn3.style.display = 'none';
+    mudaButao(morrer, morrer, morrer);
 }
 
 function falarComEle(){
