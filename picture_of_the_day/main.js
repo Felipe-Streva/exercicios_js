@@ -9,7 +9,6 @@ function elementFactory(type, id, classe, content){
 
 const myRequest = new XMLHttpRequest();
 myRequest.open("GET", "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY")
-myRequest.send()
 
 myRequest.addEventListener("load", function(){
     let aux = JSON.parse((myRequest.responseText))
@@ -32,8 +31,5 @@ myRequest.addEventListener("load", function(){
     const copy = elementFactory('p','copy', 'date', '');
     copy.innerHTML = `&copy; ${aux.copyright}` 
     body.appendChild(copy)
-
-
-
-
 })
+myRequest.send()
