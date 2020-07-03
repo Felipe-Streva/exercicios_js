@@ -1,0 +1,11 @@
+body{
+    background-image: url('https://images.unsplash.com/photo-1529788295308-1eace6f67388?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60');
+
+    background-size: cover;
+}
+
+
+h1{
+    color: white;
+    text-align: center;
+}

@@ -15,6 +15,12 @@ h2{
     font-size: 30px;
 }
 
+.foto{
+    margin: 20px auto;
+    width: 600px;
+    height: 400px;
+}
+
 iframe{
     margin: 20px auto;
     width: 600px;
