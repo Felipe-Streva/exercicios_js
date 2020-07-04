@@ -7,15 +7,22 @@ function elementFactory(type, id, classe, content){
     return elementCreated;
 }
 
-const myRequest = new XMLHttpRequest();
-myRequest.open("GET", "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY")
+function deleteElement(id, classePai){
+    let element = document.getElementById(`${id}`);
+    classePai.removeChild(element)
+}
+
+
+let myRequest = new XMLHttpRequest();
+
+myRequest.open("GET", `https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY`)
 
 myRequest.addEventListener("load", function(){
 
     if(myRequest.status==200){
         let aux = JSON.parse((myRequest.responseText))
 
-        let body = document.querySelector('body')
+        const body = document.querySelector('body')
 
         const h2 = elementFactory('h2','title', 'title', aux.title);
         body.appendChild(h2)
@@ -30,13 +37,13 @@ myRequest.addEventListener("load", function(){
                 body.appendChild(img)
             }
         } else {
-            const iframe = elementFactory('iframe','iframe', 'iframe', '');
+            const iframe = elementFactory('iframe','foto', 'iframe', '');
             iframe.src = aux.url
             body.appendChild(iframe)
         }
 
-        const data = elementFactory('p','date', 'date', aux.date);
-        body.appendChild(data)
+        const day = elementFactory('p','date', 'date', aux.date);
+        body.appendChild(day)
 
         const text = elementFactory('p','text', 'date', aux.explanation);
         body.appendChild(text)
@@ -49,3 +56,21 @@ myRequest.addEventListener("load", function(){
     }
 })
 myRequest.send()
+
+let form = document.querySelector('form');
+form.addEventListener('submit', function(event){
+    event.preventDefault()
+    const body = document.querySelector('body')
+    deleteElement('title', body)
+    deleteElement('date', body)
+    deleteElement('text', body)
+    deleteElement('copy', body)
+    deleteElement('foto', body)
+
+
+
+    myRequest.open("GET", `https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=${this.elements.date.value}`)
+
+    
+    myRequest.send()
+})
