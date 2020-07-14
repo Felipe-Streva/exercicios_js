@@ -98,8 +98,15 @@ h3{
 
 }
 
+.text-hiperlink{
+    word-break: break-all;
+}
+
 @media(max-width:500px){
     header{
         flex-direction: column;
+    }
+    .each{
+        width: 100%;
     }
 }
