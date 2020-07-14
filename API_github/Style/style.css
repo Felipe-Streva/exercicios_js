@@ -1,0 +1,105 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f0ece3;
+}
+
+header{
+    background-color: #596e79;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+h1{
+    text-align: center;
+    font-size: 50px;
+    color: #dfd3c3;
+    margin: 20px;
+}
+
+form label{
+    color: #dfd3c3;
+    font-size: 20px;
+    margin: 20px;
+}
+
+form input{
+    background-color: #dfd3c3;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border-width: 0px;
+}
+
+form button{
+    background-color: #dfd3c3;
+    padding: 10px;
+    border-radius: 10px;
+    border-width: 0px;
+}
+
+.main{
+    margin: 30px;
+    display: flex;
+}
+
+.div-avatar{
+    border-width: 2px;
+    border-color: black;
+    border-style: solid;
+    height: 104px;
+}
+
+.avatar{
+    width: 100px;
+    height: 100px;
+}
+
+.div-name{
+    margin: 10px;
+}
+
+h3{
+    font-size: 20px;
+}
+
+.repository{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.each{
+    border: black 2px solid;
+    margin: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 300px;
+    padding: 10px;
+}
+
+.link{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.git-img{
+    width: 100px;
+    height: 100px;
+
+}
+
+@media(max-width:500px){
+    header{
+        flex-direction: column;
+    }
+}

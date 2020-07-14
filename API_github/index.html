@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>GitHub Users</title>
+
+        <link rel="stylesheet" href="Style/style.css">
+
+        <script defer src="src/main.js"></script>
+        <script defer src="src/Models/UserModels.js"></script>
+        <script defer src="src/Controller/UserController.js"></script>
+        <script defer src="src/View/UserView.js"></script>
+        <script defer src="src/View/RepositoryView.js"></script>
+
+    </head>
+    <body>
+        <header>
+            <h1>GitHub Users</h1>
+            <form action="" id="form">
+                <label for="#user">The name of the user in GitHub</label>
+                <input type="text" id="user" name="input"> 
+                <button>Search</button>
+            </form>
+        </header>   
+
+        <div class="main" id="div"></div>
+        <div class="repository" id="repository"></div>
+    </body>
+</html>
+
