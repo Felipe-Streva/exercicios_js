@@ -7,8 +7,10 @@ class UserController{
 
         request.addEventListener('load', ()=>{
             if (request.status !== 200) {
-                throw new Error("Fail request, check the name of the user")
-            }
+                let errorRequest = document.querySelector('#error')
+                errorRequest.classList.remove('hidden')
+                setTimeout(()=>{errorRequest.classList.add('hidden')},5000)
+            } else {
             let objectFormat = JSON.parse(request.responseText)
             let userModel = new UserModels(objectFormat.login,
                                      objectFormat.avatar_url,
@@ -23,8 +25,10 @@ class UserController{
             requestRepository.open("GET", userModel._repos)
             requestRepository.addEventListener('load', ()=>{
                 if(requestRepository.status != 200){
-                    throw new Error("Fail repository request")
-                }
+                    let errorRequestRepository = document.querySelector('#repositoryError')
+                    errorRequestRepository.classList.remove('hidden')
+                    setTimeout(()=>{errorRequestRepository.classList.add('hidden')},5000)
+                } else {
 
                 let objectFormatRepository = JSON.parse(requestRepository.responseText)
                 let arrayRepository = []
@@ -36,10 +40,11 @@ class UserController{
                     arrayRepository.push(repository)
                 }
                 RepositoryView.template(arrayRepository)
+                }
                 
             })
             requestRepository.send()
-            
+            }
         })
 
         request.send()

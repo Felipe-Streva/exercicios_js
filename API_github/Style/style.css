@@ -43,6 +43,18 @@ form button{
     border-width: 0px;
 }
 
+.error-request{
+    text-align: center;
+    color: red;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.hidden{
+    display:none;
+}
+
 .main{
     margin: 30px;
     display: flex;
@@ -76,9 +88,6 @@ h3{
 .each{
     border: black 2px solid;
     margin: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
     width: 300px;
     padding: 10px;
 }
@@ -95,7 +104,7 @@ h3{
 .git-img{
     width: 100px;
     height: 100px;
-
+    margin-right: 10px;
 }
 
 .text-hiperlink{

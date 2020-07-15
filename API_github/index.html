@@ -18,12 +18,13 @@
         <header>
             <h1>GitHub Users</h1>
             <form action="" id="form">
-                <label for="#user">The name of the user in GitHub</label>
+                <label for="#user">GitHub's username </label>
                 <input type="text" id="user" name="input"> 
                 <button>Search</button>
             </form>
         </header>   
-
+        <p class="error-request hidden" id="error">Request failed, please check the username</p>
+        <p class="error-request hidden" id="repositoryError">Fail repositories request, GitHub API is having a problem</p>
         <div class="main" id="div"></div>
         <div class="repository" id="repository"></div>
     </body>
