@@ -89,7 +89,11 @@ h3{
     border: black 2px solid;
     margin: 15px;
     width: 300px;
-    padding: 10px;
+    
+}
+
+.each:hover{
+    border-color: #605a56;
 }
 
 .link{
@@ -99,6 +103,11 @@ h3{
     color: black;
     font-size: 20px;
     font-weight: bold;
+    padding: 10px;
+}
+
+.link:hover{
+    color: #605a56;
 }
 
 .git-img{
