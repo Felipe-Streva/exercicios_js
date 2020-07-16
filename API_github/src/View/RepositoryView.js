@@ -12,6 +12,7 @@ class RepositoryView{
 
             let link = elementFactory('a', 'link', 'link', `<img class="git-img" src="Octocat/Octocat.png" alt=""><p class="text-hiperlink">${arrayRepository[i].name}</p>`)
             link.href = arrayRepository[i].url
+            link.target = '_blank'
             eachRepository.appendChild(link)
         }
         
