@@ -5,6 +5,7 @@ body{
     width: 100%;
     background-color: #AAAAAA;
     width: 100%;
+    margin: 0px;
 }
 
 h1{
@@ -28,6 +29,21 @@ h2{
 
 @media(max-width:600px){
     #foto{
-        width: max-content;
+        width: 500px;
+        height: 335px;
+    }
+}
+
+@media(max-width:500px){
+    #foto{
+        width: 400px;
+        height: 266px;
+    }
+}
+
+@media(max-width:400px){
+    #foto{
+        width: 100%;
+        height: 280px;
     }
 }
